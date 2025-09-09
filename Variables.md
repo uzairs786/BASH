@@ -25,7 +25,7 @@ They make your script dynamic and reusable
 
 `name="Uzair"`
 
-`echo "Hello, $name`
+`echo "Hello, $name"`
 
 ## ❗Key Notes
 
