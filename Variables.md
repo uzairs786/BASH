@@ -19,7 +19,7 @@ They make your script dynamic and reusable
 
 `fruits=("apple" "banana" "orange")`
 
-`echo ${fruits[0]}` > This would output apple when running the script
+`echo ${fruits[0]}` > This would output `apple` when running the script
 
 ## Variable Interpolation
 
