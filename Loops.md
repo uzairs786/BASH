@@ -100,3 +100,52 @@ Output:
 Note:
 
 - Use `$(seq start end)` to loop over a range of numbers
+
+# 🔴 Break & Continue
+
+## ⛔ Break
+
+- This exits the loop completely
+- Useful for **stopping a loop early**
+
+      for ((i=1; i<=5; i++))
+      do
+        if [ $i -eq 3 ]; then
+            break
+        fi
+        echo "Number: $i"
+      done
+
+  Output:
+
+        Number: 1
+        Number: 2
+
+  Loop stops completely when `i == 3`
+
+  ## ♻️ Continue
+
+  - **Skips** the current iteration and moves to the next one
+  - Useful for skipping a value whilst continuing the loop
+ 
+      for ((i=1; i<=5; i++))
+      do
+        if [ $i -eq 3 ]; then
+          continue
+        fi
+        echo "Number: $i"
+      done
+
+Output:
+
+       Number: 1
+       Number: 2
+       Number: 4
+       Number: 5
+
+
+
+
+
+
+
