@@ -6,7 +6,7 @@
 
     if [ condition ]
     then
-           echo "Hello" # *Code to run if condition is met*
+           echo "Hello" # Code to run if condition is met
     fi
 
 ## Examples
