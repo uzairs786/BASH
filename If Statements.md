@@ -5,11 +5,8 @@
 ## How it is done:
 
     if [ condition ]
-
     then
-
            echo "Hello" #Code to run if condition is met
-
     fi
 
 ## Examples
