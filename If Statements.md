@@ -52,6 +52,26 @@ Note: In this case, there will be nothing printed as `85` is not greater/equal t
 - `&&` = AND (for more than one condition)
 - `||` = OR (for more than one condition)
 
+# Else & Elif Clause
+
+- `else` gives an alternative action when an `if` condition is false
+- `elif` allows multiple conditions to be checked in sequence when the preceding condition is false
+
+## Examples
+
+    age=16
+    
+    if [ $age -gt 18 ] 
+    then 
+        echo "You are an adult"
+    elif [ $age -gt 13 ]
+    then
+        echo "You are a Teenager"
+    else 
+        echo "You are not a Teenager or Adult"
+    fi
+        
+
 ## Key Notes
 - `if` statements allow conditional logic
 -  Use `[ ]` with proper spacing
