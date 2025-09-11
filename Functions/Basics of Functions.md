@@ -16,7 +16,7 @@ A function is a **reusable block of code** that performs a specific task
 ## 🧩 Functions with Parameters 
 
     greet_person() {
-    name=$1                              # $1 refers to the first argument passed when Calling the function
+    local name=$1                              # "local" refers to a local variable & $1 refers to the first argument passed when Calling the function
     echo "Hello $name"
     }
 
