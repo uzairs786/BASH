@@ -111,7 +111,3 @@ This will not run if number < 10
 
 Function returned `0`, so the script continues.
 
----
-
-Would you like me to add a **quick reference table of common exit codes (1, 2, 126, 127, 130, etc.)**?
-That’s helpful for debugging and writing more professional scripts.
