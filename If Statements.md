@@ -1,75 +1,136 @@
-# ❓If Statements in Bash
+# ❓ If Statements in Bash
 
 `if` allows **decision-making** in scripts based on conditions.
 
-## How it is done:
+---
 
-    if [ condition ]
-    then
-           echo "Hello" # Code to run if condition is met
-    fi
+## ✅ Basic Syntax
 
-## Examples
+```bash
+if [ condition ]
+then
+    # Code to run if condition is true
+    echo "Hello"
+fi
+````
 
-**🔢 Number Comparison**
-   
-    age=25
-    if [ $age -gt 18 ]
-    then
-      echo "You are an adult"
-    fi
+---
 
-**🔡 String Comparison**
+## 🔢 Number Comparison
 
-    name="Uzair"
-    if [ $name == "Uzair" ]
-      echo "Hello Uzair"
-    fi
+```bash
+age=25
+if [ $age -gt 18 ]
+then
+    echo "You are an adult"
+fi
+```
 
-**🧠 Logical Operators**
+---
 
-    grade=80
-    if [ $grade ge 90 ] && [ $grade le 100 ]
-    then
-      echo "Excellent"
-    fi 
+## 🔡 String Comparison
 
-Note: In this case, there will be nothing printed as `85` is not greater/equal to 90. It is **only** less than 100.
+```bash
+name="Uzair"
+if [ "$name" == "Uzair" ]
+then
+    echo "Hello Uzair"
+fi
+```
 
-**🔎 Operators**
+---
 
-- `-eq` - equal to
-- `-ne` - not equal to
-- `-gt` - greater than
-- `-lt` - less than
-- `ge` - greater or equal
-- `le` - less or equal
-- `==` - **string** equals
-- `!=` - **string** not equals
-- `&&` = AND (for more than one condition)
-- `||` = OR (for more than one condition)
+## 🧠 Logical Operators
 
-# Else & Elif Clause
+```bash
+grade=80
+if [ $grade -ge 90 ] && [ $grade -le 100 ]
+then
+    echo "Excellent"
+fi
+```
 
-- `else` gives an alternative action when an `if` condition is false
-- `elif` allows multiple conditions to be checked in sequence when the preceding condition is false
+> 💡 **Note:** This will not print anything because `80` is **not greater or equal to 90**.
 
-## Examples
+---
 
-    age=16
-    
-    if [ $age -gt 18 ] 
-    then 
-        echo "You are an adult"
-    elif [ $age -gt 13 ]
-    then
-        echo "You are a Teenager"
-    else 
-        echo "You are not a Teenager or Adult"
-    fi
-        
+## 🔎 Operators
 
-## Key Notes
-- `if` statements allow conditional logic
--  Use `[ ]` with proper spacing
--  Combine multiple conditions with `&&` and `||`
+### 📊 Numeric Comparison
+
+| Operator | Meaning          |
+| -------- | ---------------- |
+| `-eq`    | equal to         |
+| `-ne`    | not equal to     |
+| `-gt`    | greater than     |
+| `-lt`    | less than        |
+| `-ge`    | greater or equal |
+| `-le`    | less or equal    |
+
+---
+
+### 🔤 String Comparison
+
+| Operator | Meaning               |
+| -------- | --------------------- |
+| `==`     | strings are equal     |
+| `!=`     | strings are not equal |
+
+---
+
+### 🧩 Logical Operators
+
+| Operator | Meaning                            |    |                                          |
+| -------- | ---------------------------------- | -- | ---------------------------------------- |
+| `&&`     | AND (both conditions must be true) |    |                                          |
+| \`       |                                    | \` | OR (at least one condition must be true) |
+
+---
+
+### 📂 File Test Operators
+
+| Operator  | True If…                              |
+| --------- | ------------------------------------- |
+| `-e file` | file exists (any type)                |
+| `-f file` | file exists and is a **regular file** |
+| `-d file` | file exists and is a **directory**    |
+| `-s file` | file exists and is **not empty**      |
+| `-r file` | file is readable                      |
+| `-w file` | file is writable                      |
+| `-x file` | file is executable                    |
+
+> 💡 **Tip:** Always quote file paths like `"$file"` to avoid issues with spaces.
+
+---
+
+## 🔀 Else & Elif Clauses
+
+* `else` → gives an alternative action when the `if` condition is false
+* `elif` → allows multiple conditions to be checked in sequence
+
+### Example:
+
+```bash
+age=16
+
+if [ $age -gt 18 ]
+then 
+    echo "You are an adult"
+elif [ $age -gt 13 ]
+then
+    echo "You are a Teenager"
+else 
+    echo "You are not a Teenager or Adult"
+fi
+```
+
+---
+
+## 🗝 Key Notes
+
+* Always put **spaces** around `[ ]` (e.g., `[ $x -gt 5 ]`, not `[$x-gt5]`).
+* Use `&&` and `||` to combine multiple conditions.
+* Quote variables containing strings to avoid errors: `"$name"`.
+* Use file test operators for safe file and directory checks.
+
+```
