@@ -133,4 +133,3 @@ fi
 * Quote variables containing strings to avoid errors: `"$name"`.
 * Use file test operators for safe file and directory checks.
 
-```
