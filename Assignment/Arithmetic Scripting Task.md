@@ -65,7 +65,7 @@ Division: 5
 
 ---
 
-## ✅ What You Learned
+## ✅ What I Learned
 
 * **Arithmetic in Bash:**
 
