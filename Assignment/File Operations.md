@@ -1,6 +1,6 @@
 # 📂 Bash Challenge – File Operations
 
-## 🏹 Mission
+## 🏹 Task
 
 Write a script that:
 
