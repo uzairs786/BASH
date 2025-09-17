@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bash/bin
 
 if [ ! -f "$FILE" ]; then
     echo "This file does not exist."
@@ -18,12 +17,3 @@ else
         echo "This file exists and is executable"
     fi  
 fi
-
-
-
-
-
-
-
-
-
